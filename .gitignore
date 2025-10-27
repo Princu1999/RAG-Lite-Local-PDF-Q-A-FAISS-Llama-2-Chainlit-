@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# FAISS / vector db / cache
+vectorstore/
+!vectorstore/.gitkeep
+
+# Data
+data/
+!data/.gitkeep
+
+# OS / tools
+.DS_Store
+.idea/
+.vscode/
