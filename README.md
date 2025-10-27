@@ -10,7 +10,7 @@ Ask questions about your own PDFs—privately and locally—using a Retrieval-Au
 
 ---
 
-## ✨ Features
+## Features
 - 🔎 **RAG**: Retrieval-augmented answers grounded in your PDFs (k=2 top matches).
 - 🧩 **Chunking**: Recursive splitter (500 chars, 50 overlap) for robust retrieval.
 - 💾 **Local & Private**: Runs offline (except initial model downloads).
@@ -19,7 +19,7 @@ Ask questions about your own PDFs—privately and locally—using a Retrieval-Au
 
 ---
 
-## 🧱 Architecture (high level)
+## Architecture (high level)
 
 ```
 PDFs (data/)
@@ -31,7 +31,7 @@ PDFs (data/)
 
 ---
 
-## 📁 Project structure
+## Project structure
 
 ```
 .
@@ -54,7 +54,7 @@ PDFs (data/)
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ### 1) Python & deps
 ```bash
@@ -83,7 +83,7 @@ chainlit run model.py -w
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Environment variables (optional) via `.env`:
 ```
@@ -99,21 +99,21 @@ You can also point `CTRANSFORMERS_MODEL` to a **local** GGML file to avoid exter
 
 ---
 
-## 📏 Prompting & Retrieval
+## Prompting & Retrieval
 
 - The custom prompt constrains answers to the retrieved context and asks the model to say “I don’t know” when applicable.
 - The retriever uses **k=2** neighbors by default; tweak for recall vs precision.
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 - LangChain, langchain-community, sentence-transformers, FAISS (CPU), CTransformers, Chainlit, pypdf
 - See `requirements.txt` for exact pins.
 
 ---
 
-## 🛡️ Privacy & Licensing
+## Privacy & Licensing
 
 - Your PDFs stay local; embeddings & FAISS index are stored on your machine.
 - **Llama-2** usage follows Meta’s license; confirm your intended use complies.
@@ -121,7 +121,7 @@ You can also point `CTRANSFORMERS_MODEL` to a **local** GGML file to avoid exter
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 pytest -q
@@ -132,7 +132,7 @@ Included:
 
 ---
 
-## 🐳 Docker (optional)
+## Docker (optional)
 
 ```bash
 docker build -t rag-lite .
@@ -142,7 +142,7 @@ docker run -p 8000:8000 -v $(pwd)/data:/app/data rag-lite
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repo
 2. Create a feature branch
@@ -151,6 +151,6 @@ docker run -p 8000:8000 -v $(pwd)/data:/app/data rag-lite
 
 ---
 
-## 📜 License
+## License
 
 MIT
